@@ -1,0 +1,84 @@
+INSIGHTS
+
+multiple models can have the same collection! makes sense, the same 'collection'
+of data could drive several UI elements
+
+question - what if a particular part of the page needs to rely on multiple collections?
+in my case, the header needed only the number of items in the cart collection. what if it needed
+pieces of information from several other collections?
+
+QUESTIONS
+
+? ------------------------------------------------------------------------------
+
+For the shopping cart, I have:
+Two Views: CartView and a CartItemView.
+One Collection: CartItemsCollection.
+
+Should both CartView and CartItemView set their 'collection' to be CartItemsCollection?
+
+... do Views even need a collection? Or just Models?
+
+? ------------------------------------------------------------------------------
+
+
+My application.js App object has the following:
+
+One of the first thing my App object does is create a cart, and setting
+it to 'this.cart':
+
+createCart: function() {
+  this.cart = new CartItemsCollection();
+  new CartView({ collection: this.cart });
+},
+
+I wanted to then listen for clicks to the 'empty cart' button, which would
+trigger this function in the App object:
+
+emptyCart: function() {
+  this.cart.emptyCart.bind(this.cart);
+},
+
+However 'this.cart' was always undefined, so I had to instead just send
+clicks to recreate a new cart entirely. This satisfied the functionality
+requirement, but seems like a hack:
+
+$('#empty').on('click', this.createCart);
+
+Instead of resetting the collection, I just create a new one.
+I did this because
+
+
+? ---
+
+At one point we do this:
+
+new CartView({ collection: this.cart });
+
+
+We never do var something = new CartView... we never really reference the View
+again from application. We just create it and let it live on it's own, listening
+and triggering other things. Is that normal?
+
+-- ?
+
+layout.jade is always used. How does the program know when to utilize other views (like index or music album or wahtever)?
+answer:   express is set up to use jade, and then (for example) your /routes/index.js file has: res.render('index', {} ...) meaning use the index.jade file
+
+---?
+
+my biggest struggle was thati don't know how to preserver a view (and it's events) so that I can re-render it in teh future without making a new instance. when i do make a new isntance, I've doubled all the event listeners.
+
+i tried doing view.stopListening(), but when i re-rendered the checkout, all the event listeners were still duplicated.
+
+i couldn't just remove the checkout view, because that removes the el as well, which is <div id="#content"> which the menu needs to exist in order to re-render.
+
+
+---?
+
+when clicking left/right menu detail, occasionally the new item would appear higlhighted (as if i had selected all the images/text/buttons with the mouse). I noticed this happens with teh example app as well.
+
+
+---? fading? no itemDetail
+--? the +/- buttons on the checkout take an extra ~2 seconds to appear. i dont' know why this would be as i include the fontawesome in the layout. (from a CDN, so not local, but loaded a long time before the checkout page comes up)
+--?item detail i didn't put in teh  nutrition simply because didn't want to type in

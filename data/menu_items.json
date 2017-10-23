@@ -1,0 +1,96 @@
+[{
+  "data-id": 1,
+  "img": "images/sashimi-salad.jpg",
+  "name": "Sashimi salad",
+  "price": 12
+}, {
+  "data-id": 2,
+  "img": "images/chirashi-sushi.jpg",
+  "name": "Chirashi sushi",
+  "price": 21
+}, {
+  "data-id": 3,
+  "img": "images/seaweed-salad.jpg",
+  "name": "Seaweed salad",
+  "price": 17
+}, {
+  "data-id": 4,
+  "img": "images/edamame.jpg",
+  "name": "Edamame",
+  "price": 4
+}, {
+  "data-id": 5,
+  "img": "images/miso-soup.jpg",
+  "name": "Miso soup",
+  "price": 4
+}, {
+  "data-id": 6,
+  "img": "images/maguro.jpg",
+  "name": "Maguro",
+  "price": 12.50
+}, {
+  "data-id": 7,
+  "img": "images/shake.jpg",
+  "name": "Shake",
+  "price": 10
+}, {
+  "data-id": 8,
+  "img": "images/shiromi.jpg",
+  "name": "Shiromi",
+  "price": 9.50
+}, {
+  "data-id": 9,
+  "img": "images/tekka-maki.jpg",
+  "name": "Tekka maki",
+  "price": 6
+}, {
+  "data-id": 10,
+  "img": "images/hosomaki-mix.jpg",
+  "name": "Hosomaki Mix",
+  "price": 17
+}, {
+  "data-id": 11,
+  "img": "images/california-rolls.jpg",
+  "name": "California rolls",
+  "price": 7.75,
+}, {
+  "data-id": 12,
+  "img": "images/seattle-rolls.jpg",
+  "name": "Seattle rolls",
+  "price": 8
+}, {
+  "data-id": 13,
+  "img": "images/spicytuna-rolls.jpg",
+  "name": "Spicy tuna rolls",
+  "price": 6
+}, {
+  "data-id": 14,
+  "img": "images/ebi-rolls.jpg",
+  "name": "Ebi rolls",
+  "price": 8
+}, {
+  "data-id": 15,
+  "img": "images/chicken-teriyaki.jpg",
+  "name": "Chicken teriyaki",
+  "price": 12
+}, {
+  "data-id": 16,
+  "img": "images/salmon-teriyaki.jpg",
+  "name": "Salmon Teriyaki",
+  "price": 13.50
+}, {
+  "data-id": 17,
+  "img": "images/gohan.jpg",
+  "name": "Gohan",
+  "price": 3
+}, {
+  "data-id": 18,
+  "img": "images/tori-katsu.jpg",
+  "name": "Tori Katsu",
+  "price": 11
+}, {
+  "data-id": 19,
+  "img": "images/yaki-udon.jpg",
+  "name": "Yaki Udon",
+  "price": 11.50
+}]

@@ -1,0 +1,19 @@
+<ul>
+  {{#each items}}
+  <li>
+    <figure>
+      <img src={{img}} />
+    </figure>
+    <p>{{quantity}} x ${{price}}</p>
+  </li>
+  {{/each}}
+</ul>
+<section>
+  <h3>Your shopping cart</h3>
+  <p class="total">{{format_price total}}</p>
+  <p></p>
+  <footer>
+    <a href="#" class="left empty_cart" id="empty">Empty Cart</a>
+    <a href="/checkout" class="right checkout" id="checkout">Checkout</a>
+  </footer>
+</section>
